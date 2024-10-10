@@ -10,8 +10,6 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @Configuration
 public class AppConfig {
 
-
-
     @Bean
     public UserDetailsService userDetailsService() {
         UserDetails userDetails1 = User.withDefaultPasswordEncoder()
