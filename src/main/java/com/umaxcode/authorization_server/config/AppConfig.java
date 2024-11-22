@@ -12,15 +12,13 @@ public class AppConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        UserDetails userDetails1 = User.withDefaultPasswordEncoder()
-                .username("user1")
-                .password("password1")
+        UserDetails userDetails1 = User.withUsername("user1")
+                .password("{noop}password1")
                 .roles("user", "admin")
                 .build();
 
-        UserDetails userDetails2 = User.withDefaultPasswordEncoder()
-                .username("user2")
-                .password("password2")
+        UserDetails userDetails2 = User.withUsername("user2")
+                .password("{noop}password2")
                 .roles("user")
                 .build();
 
